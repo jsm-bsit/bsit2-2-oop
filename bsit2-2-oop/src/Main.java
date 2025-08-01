@@ -4,20 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner malongScanner = new Scanner(System.in);
 
-        System.out.println("enter number 1: ");
-        int num1 = malongScanner.nextInt();
-        System.out.println("enter number 2: ");
-        int num2 = malongScanner.nextInt();
-        System.out.println("enter number 3: ");
-        int num3 = malongScanner.nextInt();
-        System.out.println("enter number 4: ");
-        int num4 = malongScanner.nextInt();
-        System.out.println("enter number 5: ");
-        int num5 = malongScanner.nextInt();
+        int totalNumber = 0;
+        int number;
 
-        int totalSum = num1 + num2 + num3 + num4 + num5;
+        for (int i = 1; i <= 5 ; i++){
+            System.out.println("enter number " +i + ": ");
+            number = malongScanner.nextInt();
+            totalNumber += number;
+        }
 
-        System.out.println("total number is: " + totalSum);
+        System.out.println(" ");
+        System.out.println("total number is " + totalNumber);
 
 
 
