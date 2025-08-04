@@ -12,12 +12,10 @@ public class Main {
             number = malongScanner.nextInt();
             totalNumber += number;
         }
-
-        System.out.println(" ");
+        String bobp = "bob palautog ";
+        System.out.println(" " + bobp);
         System.out.println("total number is " + totalNumber);
-
 
 
     }
 }
-
