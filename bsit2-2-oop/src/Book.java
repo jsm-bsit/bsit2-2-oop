@@ -1,46 +1,62 @@
 public class Book {
-    String title = "";
-    String author = "";
+    // Attributes
+    String title;
+    String author;
     int pages;
     boolean isAvailable;
 
-    public Book() {
-        isAvailable = true;
+
+    public Book(String title, String author, int pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isAvailable = true;
+        System.out.println("A new book '" + title + "' by " + author + " has been created!");
     }
 
-    public void setBookDetails(String titleDetails, String authorDetails, int pagesDetails) {
-        title = titleDetails;
-        author = authorDetails;
-        pages = pagesDetails;
-        System.out.println("A new book '" + title + "' by author '" + author + "' has been added to the library!");
-    }
-
+    // Methods
     public void displayInfo() {
+        System.out.println("     Book Info     ");
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Pages: " + pages);
-        if (isAvailable == true) {
-            System.out.println("Available: Yes");
-        } else {
-            System.out.println("Available: No");
-        }
+        System.out.println("Available: " + (isAvailable ? "Yes" : "No"));
     }
 
     public void borrowBook() {
-        if (isAvailable) {
-            isAvailable = false;
-            System.out.println("You have borrowed the book: " + title);
+        if (!isAvailable) {
+            System.out.println(title + " is not available to borrow.");
         } else {
-            System.out.println("Sorry, the book '" + title + "' is currently unavailable.");
+            System.out.println("You have borrowed '" + title + "'. Please return it soon. Happy reading");
         }
     }
 
     public void returnBook() {
         if (!isAvailable) {
             isAvailable = true;
-            System.out.println("The book '" + title + "' has been returned. It is now available for borrowing.");
+            System.out.println("You have returned the book " + title + ", Thank you!");
         } else {
-            System.out.println("This book was not borrowed.");
+            System.out.println(title + " was not borrowed by someone.");
         }
+    }
+
+
+    public static void main(String[] args) {
+        Book book1 = new Book("Pakals", "Ashton Lactuan", 315);
+        Book book2 = new Book("Kimay Tsin", "Jed Surabasquez", 328);
+        Book book3 = new Book("A.K.P.", "Bob Agustero", 180);
+
+        System.out.println();
+
+        book1.displayInfo();
+        book1.borrowBook();
+        book1.displayInfo();
+        book1.returnBook();
+        book1.displayInfo();
+
+        System.out.println();
+
+        book2.displayInfo();
+        book3.displayInfo();
     }
 }
