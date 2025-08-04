@@ -43,8 +43,8 @@ public class Book {
 
     public static void main(String[] args) {
         Book book1 = new Book("Pakals", "Ashton Lactuan", 315);
-        Book book2 = new Book("Kimay Tsin", "Jed Surabasquez", 328);
-        Book book3 = new Book("A.K.P.", "Bob Agustero", 180);
+        Book book2 = new Book("Kimay Tsin", "Jed Surabasquez", 646);
+        Book book3 = new Book("A.K.P.", "Bob Agustero", 169);
 
         System.out.println();
 
