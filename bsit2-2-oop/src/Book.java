@@ -1,5 +1,5 @@
 public class Book {
-    // Attributes
+
     String title;
     String author;
     int pages;
@@ -14,7 +14,7 @@ public class Book {
         System.out.println("A new book '" + title + "' by " + author + " has been created!");
     }
 
-    // Methods
+
     public void displayInfo() {
         System.out.println("     Book Info     ");
         System.out.println("Title: " + title);
@@ -36,7 +36,7 @@ public class Book {
             isAvailable = true;
             System.out.println("You have returned the book " + title + ", Thank you!");
         } else {
-            System.out.println(title + " was not borrowed by someone.");
+            System.out.println(title + " is not borrowed by someone.");
         }
     }
 
