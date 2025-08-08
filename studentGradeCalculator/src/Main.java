@@ -1,20 +1,21 @@
 public class Main{
     public static void main(String[]args){
-        int studentpassing = 0;
+        int studentPassing = 0;
+        int totalStudents = 3;
 
         System.out.println("Student Information:");
 
         Student student1 = new Student("Jose Surabasquez", "19", "BSIT", 69, 90,89);
         if (student1.averageGrade > 70){
-            studentpassing++;
+            studentPassing++;
         }
         Student student2 = new Student("Bob Malong", "19", "BSIT", 69, 69,69);
         if (student2.averageGrade > 70){
-            studentpassing++;
+            studentPassing++;
         }
         Student student3 = new Student("Jed Agustero", "19", "BSIT", 69, 85,76);
         if (student3.averageGrade > 70){
-            studentpassing++;
+            studentPassing++;
         }
 
         student1.displayInfo();
@@ -37,6 +38,6 @@ public class Main{
 
 
         System.out.println(" ");
-        System.out.println("Summary: " + studentpassing + " out of 3 are passing");
+        System.out.println("Summary: " + studentPassing + " out of " + totalStudents + " are passing");
     }
 }
