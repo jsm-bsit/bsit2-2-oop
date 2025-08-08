@@ -1,4 +1,4 @@
-class Student{
+class Student {
 
     String studentName = "";
     String studentAge = "";
@@ -10,8 +10,7 @@ class Student{
     boolean isPassing = false;
 
 
-
-    Student(String name, String age, String course,double firstGrade, double secondGrade, double thirdGrade){
+    Student(String name, String age, String course, double firstGrade, double secondGrade, double thirdGrade) {
         studentName = name;
         studentAge = age;
         studentCourse = course;
@@ -21,20 +20,21 @@ class Student{
         averageGrade = (grade1 + grade2 + grade3) / 3.0;
     }
 
-    void displayInfo(){
-        System.out.println("Name: " +studentName +", " + "Age: " + ", "+ studentAge + ", "+ "Course: "+ studentCourse );
-        System.out.println("Grades : "+ grade1 + " " +  grade2 + " " + grade3);
+    void displayInfo() {
+        System.out.println("Name: " + studentName + ", " + "Age: " + ", " + studentAge + ", " + "Course: " + studentCourse);
+        System.out.println("Grades : " + grade1 + " " + grade2 + " " + grade3);
         System.out.println("Average: " + averageGrade);
-        if(isPassing){
+        if (isPassing) {
             System.out.println("Status: Passing");
-        }else{
+        } else {
             System.out.println("Status: Failing");
         }
     }
 
-    void calculateAverage(){
-        averageGrade = (grade1 + grade2 + grade3)/ 3.0;
+    void calculateAverage() {
+        averageGrade = (grade1 + grade2 + grade3) / 3.0;
     }
+
 
     void getLetterGrade(){
         if(averageGrade >= 90){
@@ -58,5 +58,6 @@ class Student{
             isPassing = false;
             System.out.println("Status: FAILING");
         }
+
     }
 }
