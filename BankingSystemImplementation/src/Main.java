@@ -3,7 +3,7 @@ public class Main {
 
         System.out.println("Bank Name: " + BankAccount.bankName);
         System.out.println("Interest Rate: 3.0%");
-
+        System.out.println(" ");
         int accounts = 0;
 
         BankAccount account1 = new BankAccount("John Doe", 1000.00);
