@@ -2,7 +2,7 @@ import java.util.*;
 
 public class PostManager {
 
-    // 1. calculateEngagement
+
     public int calculateEngagement(int... interactions) {
         if (interactions == null || interactions.length == 0) return 0;
         int total = 0;
@@ -12,7 +12,7 @@ public class PostManager {
         return total;
     }
 
-    // 2. getCategoryRating
+
     public String getCategoryRating(int engagementScore) {
         if (engagementScore >= 1000) return "Viral";
         else if (engagementScore >= 500) return "Popular";
@@ -21,7 +21,7 @@ public class PostManager {
         else return "Poor";
     }
 
-    // 3. displayPostStats (overloaded)
+
     public void displayPostStats(String postTitle, int engagementScore) {
         System.out.println("Post: " + postTitle);
         System.out.println("Engagement Score: " + engagementScore);
@@ -33,13 +33,13 @@ public class PostManager {
         System.out.println("Category: " + category);
     }
 
-    // 4. manageHashtags
+
     public ArrayList<String> manageHashtags(String[] hashtags) {
         HashSet<String> uniqueSet = new HashSet<>(Arrays.asList(hashtags));
         return new ArrayList<>(uniqueSet);
     }
 
-    // 5. findTrendingPosts
+
     public LinkedList<String> findTrendingPosts(ArrayList<String> posts, HashMap<String, Integer> postEngagement) {
         LinkedList<String> trending = new LinkedList<>();
         for (String post : posts) {
@@ -50,7 +50,7 @@ public class PostManager {
         return trending;
     }
 
-    // 6. getUniqueAuthors
+
     public HashSet<String> getUniqueAuthors(String... authors) {
         return new HashSet<>(Arrays.asList(authors));
     }

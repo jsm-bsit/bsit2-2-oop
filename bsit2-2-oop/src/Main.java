@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         PostManager manager = new PostManager();
 
-        // Sample data
+
         String postTitle = "Java Programming Tips";
         int engagementScore = manager.calculateEngagement(150, 75, 25);
         String category = manager.getCategoryRating(engagementScore);
@@ -22,7 +22,7 @@ public class Main {
 
         HashSet<String> uniqueAuthors = manager.getUniqueAuthors("Alice", "Bob", "Alice", "Charlie", "Bob");
 
-        // Display Output
+
         System.out.println("═══ Social Media Post Manager ═══");
         manager.displayPostStats(postTitle, engagementScore, category);
         System.out.println();
