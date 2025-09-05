@@ -4,12 +4,12 @@ public class Main {
 
         System.out.println("Creating orders and adding items...");
 
-        // Create 3 orders
+
         foodOrderingSystem order1 = new foodOrderingSystem("Alice Johnson");
         foodOrderingSystem order2 = new foodOrderingSystem("Bob Smith");
         foodOrderingSystem order3 = new foodOrderingSystem("Charlie Brown");
 
-        // Add items to Alice (valid)
+
         try {
             order1.addMultipleItems(
                     new String[]{"Pizza", "Pasta", "Salad"},
@@ -20,7 +20,7 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
         }
 
-        // Add items to Bob (valid)
+
         try {
             order2.addMultipleItems(
                     new String[]{"Burger", "Fries", "Soda", "Nuggets", "Ice Cream"},
@@ -31,7 +31,7 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
         }
 
-        // Add invalid items to Charlie
+
         try {
             order3.addItem("Hotdog", -5.00);
         } catch (IllegalArgumentException e) {
@@ -44,7 +44,7 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
         }
 
-        // Add valid items to Charlie
+
         try {
             order3.addMultipleItems(
                     new String[]{"Taco", "Juice"},
@@ -55,22 +55,22 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
         }
 
-        // Display orders
+
         System.out.println("\nOrder Results:");
         System.out.println(order1.displayOrder());
         System.out.println(order2.displayOrder());
         System.out.println(order3.displayOrder());
 
-        // Show total orders
+
         System.out.println("\nTotal orders created: " + foodOrderingSystem.getTotalOrders());
 
-        // Show all order totals
+
         System.out.println("All Orders:");
         System.out.printf("- %s: $%.2f\n", order1.getCustomerName(), order1.getTotalAmount());
         System.out.printf("- %s: $%.2f\n", order2.getCustomerName(), order2.getTotalAmount());
         System.out.printf("- %s: $%.2f\n", order3.getCustomerName(), order3.getTotalAmount());
 
-        // Find largest order
+
         foodOrderingSystem[] allOrders = {order1, order2, order3};
         foodOrderingSystem largestOrder = allOrders[0];
         for (foodOrderingSystem o : allOrders) {
