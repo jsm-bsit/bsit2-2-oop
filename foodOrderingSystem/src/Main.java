@@ -5,9 +5,9 @@ public class Main {
         System.out.println("Creating orders and adding items...");
 
         // Create 3 orders
-        Order order1 = new Order("Alice Johnson");
-        Order order2 = new Order("Bob Smith");
-        Order order3 = new Order("Charlie Brown");
+        foodOrderingSystem order1 = new foodOrderingSystem("Alice Johnson");
+        foodOrderingSystem order2 = new foodOrderingSystem("Bob Smith");
+        foodOrderingSystem order3 = new foodOrderingSystem("Charlie Brown");
 
         // Add items to Alice (valid)
         try {
@@ -31,7 +31,7 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
         }
 
-        // Add invalid items to Charlie (test exceptions)
+        // Add invalid items to Charlie
         try {
             order3.addItem("Hotdog", -5.00);
         } catch (IllegalArgumentException e) {
@@ -62,18 +62,18 @@ public class Main {
         System.out.println(order3.displayOrder());
 
         // Show total orders
-        System.out.println("\nTotal orders created: " + Order.getTotalOrders());
+        System.out.println("\nTotal orders created: " + foodOrderingSystem.getTotalOrders());
 
-        // Print all order totals
+        // Show all order totals
         System.out.println("All Orders:");
         System.out.printf("- %s: $%.2f\n", order1.getCustomerName(), order1.getTotalAmount());
         System.out.printf("- %s: $%.2f\n", order2.getCustomerName(), order2.getTotalAmount());
         System.out.printf("- %s: $%.2f\n", order3.getCustomerName(), order3.getTotalAmount());
 
         // Find largest order
-        Order[] allOrders = {order1, order2, order3};
-        Order largestOrder = allOrders[0];
-        for (Order o : allOrders) {
+        foodOrderingSystem[] allOrders = {order1, order2, order3};
+        foodOrderingSystem largestOrder = allOrders[0];
+        for (foodOrderingSystem o : allOrders) {
             if (o.getTotalAmount() > largestOrder.getTotalAmount()) {
                 largestOrder = o;
             }

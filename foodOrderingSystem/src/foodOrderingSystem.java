@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public class Order {
+public class foodOrderingSystem {
     private String customerName;
     private ArrayList<String> items;
     private ArrayList<Double> prices;
     private static int totalOrders = 0;
 
-    // Constructor
-    public Order(String customerName) {
+
+    public foodOrderingSystem(String customerName) {
         this.customerName = customerName;
         this.items = new ArrayList<>();
         this.prices = new ArrayList<>();
